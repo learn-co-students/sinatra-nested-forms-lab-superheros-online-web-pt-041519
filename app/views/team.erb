@@ -1,3 +1,26 @@
 
 
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Superhero List</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<!-- # i was too lazy to create a layout despite that i coded more by doing this.lol -->
+  <body>
+    <h1><%= @team.name %></h1>
+
+    <span><h2>Team Motto: <%= @team.motto %></h2></span> <br>
+
+    <% @members.each do |member | %>
+
+         <h2>Hero Name: <%= member.name %></h2> <br>
+         <h3>Hero Power:</h3> <%= member.power %><br>
+        <h3>Hero Biography:</h3> <%= member.bio %><br><br>
+    <% end %>
+
+  </body>
+</html>
