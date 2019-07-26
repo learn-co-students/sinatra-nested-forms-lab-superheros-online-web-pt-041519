@@ -1,1 +1,37 @@
+<h1>Create a Team and Heroes!</h1>
 
+<!--params = {
+        "team" => { 
+            "name" => "Avengers", 
+            "motto" => "Protect the World!", 
+            "members" => [ 
+                {"name" => "Wolverine", 
+                "power" => "claw the shit out of someone", 
+                "bio" => "orphan"},
+
+                {"name" => "Superman", 
+                "power" => "flying, x-ray vision", 
+                "bio" => "orphan from Krypton"},
+                ]
+        } #team hash end
+    } #params hash end
+ -->
+
+<form action="/teams" method="POST">
+    <h3>Superhero Team</h3>
+    <p>Team Name: <input type="text" id="team_name" name="team[name]"></p>
+    <p>Motto: <input type="text" id="team_motto" name="team[motto]"></p>
+    <h3>Superhero 1</h3> 
+    <p>Superhero Name: <input type="text" id="member1_name" name="team[members][][name]"></p>
+    <p>Superhero Power: <input type="text" id="member1_power" name="team[members][][power]"></p>
+    <p>Superhero Biography: <input type="text" id="member1_bio" name="team[members][][bio]"></p>
+    <h3>Superhero 2</h3> 
+    <p>Superhero Name: <input type="text" id="member2_name" name="team[members][][name]"></p>
+    <p>Superhero Power: <input type="text" id="member2_power" name="team[members][][power]"></p>
+    <p>Superhero Biography: <input type="text" id="member2_bio" name="team[members][][bio]"></p>
+    <h3>Superhero 3</h3> 
+    <p>Superhero Name: <input type="text" id="member3_name" name="team[members][][name]"></p>
+    <p>Superhero Power: <input type="text" id="member3_power" name="team[members][][power]"></p>
+    <p>Superhero Biography: <input type="text" id="member3_bio" name="team[members][][bio]"></p>
+    <button type="submit" value="submit">Submit</button>
+</form>
